@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Message</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #8b0000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            animation: flicker 4s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 60px;
+            font-size: 1.1em;
+        }
+
+        .story-section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(20, 20, 20, 0.6);
+            border-left: 3px solid #8b0000;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .story-section:nth-child(even) {
+            animation-delay: 0.3s;
+        }
+
+        .story-section:nth-child(odd) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.15em;
+            text-indent: 2em;
+        }
+
+        .message {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+            color: #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+
+        .timestamp {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .glitch {
+            position: relative;
+            animation: glitch 3s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% {
+                transform: translate(0);
+            }
+            92% {
+                transform: translate(-2px, 2px);
+            }
+            94% {
+                transform: translate(2px, -2px);
+            }
+        }
+
+        .warning {
+            color: #ff0000;
+            text-align: center;
+            font-size: 1.3em;
+            margin: 40px 0;
+            padding: 20px;
+            border: 2px solid #ff0000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+            }
+        }
+
+        .static {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.1) 4px
+                );
+            animation: scan 0.1s infinite;
+        }
+
+        @keyframes scan {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        .final-message {
+            text-align: center;
+            font-size: 2em;
+            color: #8b0000;
+            margin-top: 60px;
+            animation: fadeInSlow 5s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInSlow {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="static"></div>
+    <div class="container">
+        <h1 class="glitch">THE LAST MESSAGE</h1>
+        <div class="subtitle">Based on True Events - October 31st, 2024</div>
+
+        <div class="story-section">
+            <p>Sarah had always been careful about online privacy. She used VPNs, encrypted messaging, and never gave out personal information. But on Halloween night, something changed.</p>
+
+            <p>It started with a notification at 3:47 AM. Her phone buzzed on the nightstand, pulling her from a dreamless sleep. The screen glowed in the darkness, showing a message from an unknown number.</p>
+        </div>
+
+        <div class="message">
+            <div class="timestamp">[03:47:23] UNKNOWN</div>
+            <div>I can see you sleeping.</div>
+        </div>
+
+        <div class="story-section">
+            <p>Sarah's heart stopped. She lived alone on the fifth floor of a secure apartment building. The blinds were closed. She grabbed her phone with trembling hands and checked every window—all locked, curtains drawn. Probably just a prank, she thought. Some automated spam message with unfortunate timing.</p>
+
+            <p>She blocked the number and tried to go back to sleep. But fifteen minutes later, another buzz.</p>
+        </div>
+
+        <div class="message">
+            <div class="timestamp">[04:03:11] UNKNOWN</div>
+            <div>Blocking me won't help. Nice blue sheets, by the way.</div>
+        </div>
+
+        <div class="story-section">
+            <p>The sheets WERE blue. Sarah's blood ran cold. She jumped out of bed and checked her laptop—camera covered. Phone camera—she never gave permissions. Smart TV—unplugged months ago. How could anyone possibly know?</p>
+
+            <p>She called the police, but they said without an explicit threat, there was little they could do. They suggested she stay with a friend. Sarah packed a bag, hands shaking, and headed for the door.</p>
+
+            <p>Another message stopped her in the hallway.</p>
+        </div>
+
+        <div class="message">
+            <div class="timestamp">[04:31:47] UNKNOWN</div>
+            <div>Where are you going, Sarah? Your friend Michelle won't answer. She's sleeping too deeply tonight.</div>
+        </div>
+
+        <div class="story-section">
+            <p>Sarah never told anyone she was going to Michelle's house. She hadn't even called her yet. With trembling fingers, she tried Michelle's number. It went straight to voicemail. She tried again. And again.</p>
+
+            <p>The elevator dinged behind her. Empty. But the phone buzzed again.</p>
+        </div>
+
+        <div class="message">
+            <div class="timestamp">[04:33:02] UNKNOWN</div>
+            <div>Wrong direction. I'm not in the elevator.</div>
+        </div>
+
+        <div class="story-section">
+            <p>Sarah spun around, looking at every shadow, every corner. The hallway was empty except for the flickering fluorescent light at the far end. She ran back to her apartment, slammed the door, and pushed her dresser against it.</p>
+
+            <p>She called 911 again. As she spoke to the operator, explaining everything, a final message arrived. This one was different. It wasn't text.</p>
+
+            <p>It was a photo.</p>
+
+            <p>Of her. Right now. Talking on the phone. In her apartment. Taken from inside her bedroom closet.</p>
+        </div>
+
+        <div class="warning">
+            ⚠ POLICE REPORT #HC-103124 - SUBJECT REMAINS MISSING ⚠
+        </div>
+
+        <div class="story-section">
+            <p>When police arrived at 5:02 AM, they found the apartment empty. The dresser was still against the door. All windows remained locked from the inside. Sarah's phone was on the bed, camera lens shattered, still displaying that final photograph.</p>
+
+            <p>But Sarah was gone.</p>
+
+            <p>The closet door stood open, revealing nothing but empty hangers swaying slightly, as if someone had just brushed past them. On the closet floor, they found Sarah's shoes, placed neatly side by side.</p>
+
+            <p>She never wore shoes indoors.</p>
+        </div>
+
+        <div class="message">
+            <div class="timestamp">[05:47:23] UNKNOWN → YOU</div>
+            <div class="glitch">Thanks for reading Sarah's story.
+
+She wanted someone to know what happened.
+
+By the way... nice device you're reading this on.
+
+Sweet dreams.</div>
+        </div>
+
+        <div class="final-message">
+            Close this tab. Now.
+        </div>
+    </div>
+
+    <script>
+        // Ambient horror effects
+        setTimeout(() => {
+            document.body.style.cursor = 'none';
+            setTimeout(() => {
+                document.body.style.cursor = 'default';
+            }, 3000);
+        }, 15000);
+
+        // Random screen flicker
+        setInterval(() => {
+            if (Math.random() > 0.95) {
+                document.body.style.opacity = '0.7';
+                setTimeout(() => {
+                    document.body.style.opacity = '1';
+                }, 50);
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
